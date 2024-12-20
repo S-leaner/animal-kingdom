@@ -16,13 +16,17 @@ let pokemonList = [
     }
 ];
 
-for ( let i = 0; i < pokemonList.length; i++ ){
-    document.write( pokemonList[i].name + "  height: " + pokemonList[i].height + "<p>");
-} //to print all pokemon's name and height
 
-for( let i = 0; i< pokemonList.length; i++ ){
-    if( pokemonList[i].height >= 6 ) {
-        document.write(pokemonList[i].name + " : wow it is big");
+pokemonList.forEach(function(pokemon){
+    document.write(pokemon.name + " height: " + pokemon.height + "<p>")
+});
+//to print all pokemon's name and height
+
+pokemonList.forEach(pokemon => {
+    if (pokemon.height >= 6) {
+        document.write(pokemon.name + " : wow it is big");
     }
-}//to print message for the largest pokemon
+});
+
+//to print message for the largest pokemon
 
